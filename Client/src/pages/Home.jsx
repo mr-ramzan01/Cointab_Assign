@@ -4,9 +4,7 @@ export const Home = () => {
   const navigate = useNavigate();
 
   const handleFetchUsers = () => {
-    fetch('http://localhost:5000/fetchUsers', {
-      method: 'POST'
-    })
+    fetch('https://cointab-byhq.onrender.com/fetchUsers')
     .then(res => res.json())
     .then(res => {
       if(res.status === 'success') {
@@ -23,7 +21,7 @@ export const Home = () => {
   }
 
   const handleDeleteUsers = () => {
-    fetch('http://localhost:5000/deleteUsers', {
+    fetch('https://cointab-byhq.onrender.com/deleteUsers', {
       method: 'DELETE'
     })
     .then(res => res.json())

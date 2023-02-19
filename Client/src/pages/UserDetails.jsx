@@ -6,7 +6,7 @@ export const UserDetails = () => {
   const [totalUsers, setTotalUsers] = useState(0);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/userdetails?page=${page}`)
+    fetch(`https://cointab-byhq.onrender.com/userdetails?page=${page}`)
       .then((res) => res.json())
       .then((res) => {
         if (res.status === "success") {
