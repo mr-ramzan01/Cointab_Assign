@@ -21,6 +21,10 @@ const AddedData = async (result, res) => {
     }
 }
 
+app.get('/', (req, res) => {
+    res.status(200).send("In home");
+})
+
 app.post('/fetchUsers', async (req, res) => {
     try {
         fetch('https://randomuser.me/api/?results=500')
