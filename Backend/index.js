@@ -3,6 +3,8 @@ const cors = require('cors');
 const connection = require('./configs/database');
 const userModel = require('./models/userModel');
 const app = express();
+const port = process.env.PORT || 5000;
+
 app.use(express.json());
 app.use(cors());
 
@@ -77,9 +79,9 @@ app.get('/userdetails', async (req, res) => {
 
 
 connection();
-app.listen(5000, () => {
+app.listen(port, () => {
     try {
-        console.log('listening on port 5000');
+        console.log(`listening on port ${port}`);
     } catch (error) {
         console.log('Not listening');
     }
